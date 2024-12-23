@@ -21,9 +21,11 @@ body {
 
 .slideshow img {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the image fills the screen */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -52,7 +54,7 @@ header {
 }
 
 .dropdown-menu {
-    display: none;
+    display: none; /* Initially hidden */
     background: rgba(18, 18, 18, 0.9);
     position: absolute;
     top: 100%;
@@ -80,14 +82,16 @@ header {
 
 /* Profile Section */
 .profile {
-    position: relative;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 10;
 }
 
 .profile-pic {
+    margin-bottom: 20px;
     border-radius: 50%;
     border: 3px solid yellow;
     width: 150px;
@@ -118,7 +122,8 @@ p {
 .social-icons img {
     width: 40px;
     height: 40px;
-    filter: brightness(0) invert(1); /* Makes icons appear in white */
+    filter: brightness(0) invert(1); /* Makes icons white for dark mode */
+    margin: 0 10px;
     transition: transform 0.3s;
 }
 

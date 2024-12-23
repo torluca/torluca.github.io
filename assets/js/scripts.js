@@ -15,5 +15,9 @@ const menuToggle = document.getElementById('menu-toggle');
 const dropdown = document.getElementById('dropdown');
 
 menuToggle.addEventListener('click', () => {
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
 });

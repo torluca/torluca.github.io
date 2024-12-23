@@ -1,115 +1,146 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    overflow: hidden;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    color: #e0e0e0; /* Light text */
-    background-color: #121212; /* Dark background */
-    margin: 0;
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    background-color: #1f1f1f; /* Darker header background */
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    position: sticky;
+/* Slideshow */
+.slideshow {
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #333;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #e0e0e0;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #1db954; /* Accent color (green) */
-}
-
-/* Main Content */
-main {
-    padding: 2em 1em;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Footer */
-footer {
-    background-color: #1f1f1f;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
+    left: 0;
     width: 100%;
-    border-top: 1px solid #333;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1em auto;
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Buttons */
-button {
-    background-color: #1db954;
-    border: none;
-    color: white;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    border-radius: 5px;
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* Header and Menu */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    color: yellow;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #14833b;
+.dropdown-menu {
+    display: none;
+    background: rgba(18, 18, 18, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-/* Links */
-a {
-    color: #1db954;
+.dropdown-menu ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.dropdown-menu ul li {
+    margin: 10px 0;
+}
+
+.dropdown-menu ul li a {
+    color: yellow;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 1.2rem;
 }
 
-a:hover {
-    color: #14833b;
+/* Profile Section */
+.profile {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 10;
 }
 
-/* Mobile-specific styles */
+.profile-pic {
+    border-radius: 50%;
+    border: 3px solid yellow;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2rem;
+    color: yellow;
+}
+
+p {
+    font-size: 1.2rem;
+    color: yellow;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Makes icons appear in white */
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
+    h1 {
+        font-size: 1.5rem;
     }
 
-    main {
-        padding: 1em;
+    p {
+        font-size: 1rem;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dropdown-menu ul li a {
+        font-size: 1rem;
     }
 }

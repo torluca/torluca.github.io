@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Dr. [Your Name]</title>
+    <title>Luca Tortorelli</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
+    <!-- Background Slideshow -->
+    <div class="slideshow">
+        <img src="assets/images/Abell_S1063.jpg" class="active">
+        <img src="assets/images/macs0416.png">
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Menu -->
     <header>
-        <nav>
+        <div class="menu-icon" id="menu-toggle">
+            ☰
+        </div>
+        <nav class="dropdown-menu" id="dropdown">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="research.html">My Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="codes.html">My Codes</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#codes">Codes</a></li>
+                <li><a href="#outreach">Outreach</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <section>
-            <h1>Welcome to My Website</h1>
-            <p>Hello! I am Dr. [Your Name], an astrophysicist and a postdoctoral researcher at the University Observatory of LMU Munich. Explore my research, publications, and outreach activities here.</p>
-        </section>
+        <div class="profile">
+            <img src="assets/images/Tortorelli_picture.jpg" alt="Luca Tortorelli" class="profile-pic">
+            <h1>Luca Tortorelli</h1>
+            <p>Astrophysicist | Science Communicator</p>
+            <div class="social-icons">
+                <a href="https://ui.adsabs.harvard.edu/public-libraries/QxeQDRpHRCiAYWTkVLvgmA" target="_blank"><img src="assets/icons/ads_logo.png" alt="ADS NASA"></a>
+                <a href="https://www.linkedin.com/in/luca-tortorelli/" target="_blank"><img src="assets/icons/LinkedIn_logo.png" alt="LinkedIn"></a>
+                <a href="https://github.com/torluca" target="_blank"><img src="assets/icons/github_logo.png" alt="GitHub"></a>
+                <a href="mailto:astro.luca.tortorelli@gmail.com"><img src="assets/icons/email_logo.png" alt="Email"></a>
+                <a href="https://www.instagram.com/lucathestarman/" target="_blank"><img src="assets/icons/Instagram_logo.png" alt="Instagram"></a>
+                <a href="https://www.geopop.it/author/lucatortorelli/" target="_blank"><img src="assets/icons/geopop_logo" alt="Geopop"></a>
+            </div>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Dr. [Your Name]. All rights reserved.</p>
-    </footer>
 </body>
 </html>

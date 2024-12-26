@@ -226,9 +226,9 @@ p {
     transform: translate(-1px,-1px);
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
-}
+/*.social-icons img:hover {
+    transform: scale(1.0);
+}*/
 
 @media (max-width: 768px) {
     h1 {
@@ -240,8 +240,8 @@ p {
     }
 
     .social-icons img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 
     .dropdown-menu ul li a {

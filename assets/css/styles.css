@@ -62,14 +62,14 @@ header {
     height: 100%; /* Full height */
     padding: 60px 20px; /* Add padding to avoid overlap with the menu icon */
     background-color: rgba(18, 18, 18, 0.95);
-    z-index: 999; /* Ensure it appears below the menu icon */
+    z-index: 1050; /* Ensure it appears below the menu icon */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
 }
 
 .dropdown-menu.active {
     display: block;
-    transform: translateX(0);
+    transform: translateX(0); /* Slide-in effect */
 }
 
 .dropdown-menu ul {
@@ -129,10 +129,40 @@ header {
     transform: rotate(-45deg) translateY(-10px);
 }
 
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100; /* Higher than the dropdown menu */
+    cursor: pointer;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: yellow;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+#menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 
 /* Profile Section */
 .profile {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Dropdown Menu Toggle
 const menuToggle = document.getElementById('menu-toggle');
-const dropdown = document.getElementById('dropdown');
+const dropdownMenu = document.querySelector(".dropdown-menu");
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    dropdown.classList.toggle('active');
+menuToggle.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
 });

@@ -223,7 +223,7 @@ p {
     max-height: 110%;
     object-fit: contain; /* Maintains aspect ratio */
     align-items: center; /* Centers the image */
-    transform: translate(-1px,-1px);
+    transform: translate(-2px,-1px);
 }
 
 /*.social-icons img:hover {

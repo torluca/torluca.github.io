@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 30000); // 30 seconds
 });
 
-// Dropdown Menu Toggle
-const menuToggle = document.getElementById('menu-toggle');
+// JavaScript to toggle dropdown menu
+const menuToggle = document.getElementById("menu-toggle");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
+// Toggle the menu on clicking the icon
 menuToggle.addEventListener("click", () => {
     dropdownMenu.classList.toggle("active");
     menuToggle.classList.toggle("active");

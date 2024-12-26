@@ -135,15 +135,18 @@ header {
 /* Profile Section */
 .profile {
     position: absolute;
+    display: flex; /* Use flexbox for vertical stacking */
+    flex-direction: column; /* Stack children vertically */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    align-items: center;
     z-index: 1;
 }
 
 .profile-pic {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 50%;
     border: 5px solid yellow;
     width: 150px;
@@ -226,6 +229,19 @@ p {
 /*.social-icons img:hover {
     transform: scale(1.0);
 }*/
+
+.profile-description-box {
+    display: block; /* Block-level element to occupy full width */
+    margin: 20px 0; /* Space above and below the box */
+    padding: 15px 20px; /* Space inside the box */
+    border: 2px solid yellow; /* Yellow border */
+    background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent background */
+    color: yellow; /* Text color */
+    border-radius: 10px; /* Optional: Rounded corners */
+    max-width: 400px; /* Limit width for a clean look */
+    width: 100%; /* Ensure responsiveness */
+}
+
 
 @media (max-width: 768px) {
     h1 {

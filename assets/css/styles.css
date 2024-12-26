@@ -139,7 +139,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 10;
+    z-index: 1;
 }
 
 .profile-pic {
@@ -148,6 +148,7 @@ header {
     border: 3px solid yellow;
     width: 150px;
     height: 150px;
+    z-index: 1;
     object-fit: cover;
 }
 
@@ -169,14 +170,60 @@ p {
 .social-icons a {
     margin: 0 10px;
     display: inline-block;
+    width: 40px; /* Consistent container size */
+    height: 40px; /* Consistent container size */
+    overflow: hidden; /* Ensures no overflow outside the container */
+    border-radius: 50%; /* Optional: make icons circular */
+    background-color: white; /* Optional: Add background color */
+    justify-content: center;
+    align-items: center; /* Centers the image */
 }
 
 .social-icons img {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0) invert(1); /* Makes icons white for dark mode */
-    margin: 0 10px;
-    transition: transform 0.3s;
+    max-width: 100%; /* Scale to fit the width */
+    max-height: 100%; /* Scale to fit the height */
+    object-fit: contain; /* Maintains aspect ratio */
+    display: block; /* Ensures no inline spacing issues */
+}
+
+.ads-icon img {
+    max-width: 110%; /* Default size */
+    max-height: 110%;
+    object-fit: contain; /* Maintains aspect ratio */
+    align-items: center; /* Centers the image */
+    transform: translate(-1px,-2px); /* Move left by 5px */
+}
+
+.linkedin-icon img {
+    max-width: 100%; /* Default size */
+    max-height: 100%;
+    object-fit: contain; /* Maintains aspect ratio */
+    align-items: center; /* Centers the image */
+    /* transform: translate(-1px,-2px); /* Move left by 5px */
+}
+
+.github-icon img {
+    max-width: 115%; /* Default size */
+    max-height: 115%;
+    object-fit: contain; /* Maintains aspect ratio */
+    align-items: center; /* Centers the image */
+    transform: translate(-3px,-2px);
+}
+
+.email-icon img {
+    max-width: 110%; /* Default size */
+    max-height: 110%;
+    object-fit: contain; /* Maintains aspect ratio */
+    align-items: center; /* Centers the image */
+    transform: translate(-2px,-2px);
+}
+
+.geopop-icon img {
+    max-width: 110%; /* Default size */
+    max-height: 110%;
+    object-fit: contain; /* Maintains aspect ratio */
+    align-items: center; /* Centers the image */
+    transform: translate(-1px,-1px);
 }
 
 .social-icons img:hover {

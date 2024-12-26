@@ -10,11 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 30000); // 30 seconds
 });
 
-// Dropdown Menu Toggle
-const menuToggle = document.getElementById('menu-toggle');
-const dropdown = document.getElementById('dropdown');
+// JavaScript for handling dropdown menu toggle
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const dropdown = document.getElementById("dropdown");
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    dropdown.classList.toggle('active');
+    menuToggle.addEventListener("click", () => {
+        // Toggle the dropdown menu
+        dropdown.classList.toggle("active");
+
+        // Ensure menu icon toggles back
+        menuToggle.classList.toggle("active");
+    });
 });

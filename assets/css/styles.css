@@ -129,6 +129,36 @@ header {
     transform: rotate(-45deg) translateY(-10px);
 }
 
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100; /* Higher than the dropdown menu */
+    cursor: pointer;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: yellow;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+#menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 
 /* Profile Section */
 .profile {

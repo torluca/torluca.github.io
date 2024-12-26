@@ -179,13 +179,6 @@ p {
     align-items: center; /* Centers the image */
 }
 
-.social-icons img {
-    max-width: 100%; /* Scale to fit the width */
-    max-height: 100%; /* Scale to fit the height */
-    object-fit: contain; /* Maintains aspect ratio */
-    display: block; /* Ensures no inline spacing issues */
-}
-
 .ads-icon img {
     max-width: 110%; /* Default size */
     max-height: 110%;
@@ -216,6 +209,13 @@ p {
     object-fit: contain; /* Maintains aspect ratio */
     align-items: center; /* Centers the image */
     transform: translate(-2px,-2px);
+}
+
+.instagram-icon img {
+    max-width: 100%; /* Scale to fit the width */
+    max-height: 100%; /* Scale to fit the height */
+    object-fit: contain; /* Maintains aspect ratio */
+    display: block; /* Ensures no inline spacing issues */
 }
 
 .geopop-icon img {

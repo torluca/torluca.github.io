@@ -180,11 +180,10 @@ p {
 }
 
 .ads-icon img {
-    max-width: 110%; /* Default size */
-    max-height: 110%;
+    max-width: 100%; /* Default size */
+    max-height: 100%;
     object-fit: contain; /* Maintains aspect ratio */
     align-items: center; /* Centers the image */
-    transform: translate(-1px,-2px); /* Move left by 5px */
 }
 
 .linkedin-icon img {
@@ -196,19 +195,17 @@ p {
 }
 
 .github-icon img {
-    max-width: 115%; /* Default size */
-    max-height: 115%;
+    max-width: 100%; /* Default size */
+    max-height: 100%;
     object-fit: contain; /* Maintains aspect ratio */
     align-items: center; /* Centers the image */
-    transform: translate(-3px,-2px);
 }
 
 .email-icon img {
-    max-width: 110%; /* Default size */
-    max-height: 110%;
+    max-width: 100%; /* Default size */
+    max-height: 100%;
     object-fit: contain; /* Maintains aspect ratio */
     align-items: center; /* Centers the image */
-    transform: translate(-2px,-2px);
 }
 
 .instagram-icon img {
@@ -219,11 +216,11 @@ p {
 }
 
 .geopop-icon img {
-    max-width: 110%; /* Default size */
-    max-height: 110%;
+    max-width: 100%; /* Default size */
+    max-height: 100%;
     object-fit: contain; /* Maintains aspect ratio */
     align-items: center; /* Centers the image */
-    transform: translate(-2px,-1px);
+    /*transform: translate(-2px,-1px);*/
 }
 
 /*.social-icons img:hover {

@@ -51,7 +51,7 @@ header {
 
 .menu-icon {
     font-size: 1.5rem;
-    color: yellow;
+    color: Turquoise;
     cursor: pointer;
 }
 
@@ -85,7 +85,7 @@ header {
 }
 
 .dropdown-menu ul li a {
-    color: yellow;
+    color: Turquoise;
     text-decoration: none;
     font-size: 1.5em;
     transition: 0.3s;
@@ -113,7 +113,7 @@ header {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: yellow;
+    background-color: Turquoise;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
@@ -148,7 +148,7 @@ header {
 .profile-pic {
     margin-bottom: 10px;
     border-radius: 50%;
-    border: 5px solid yellow;
+    border: 5px solid Turquoise;
     width: 150px;
     height: 150px;
     z-index: 1;
@@ -157,12 +157,12 @@ header {
 
 h1 {
     font-size: 2rem;
-    color: yellow;
+    color: Turquoise;
 }
 
 p {
     font-size: 1.2rem;
-    color: yellow;
+    color: Turquoise;
 }
 
 /* Social Icons */
@@ -176,6 +176,7 @@ p {
     width: 40px; /* Consistent container size */
     height: 40px; /* Consistent container size */
     overflow: hidden; /* Ensures no overflow outside the container */
+    border: 2px solid Turquoise;
     border-radius: 50%; /* Optional: make icons circular */
     background-color: white; /* Optional: Add background color */
     justify-content: center;
@@ -234,9 +235,9 @@ p {
     display: block; /* Block-level element to occupy full width */
     margin: 20px 0; /* Space above and below the box */
     padding: 15px 20px; /* Space inside the box */
-    border: 2px solid yellow; /* Yellow border */
+    border: 2px solid Turquoise; /* Turquoise border */
     background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent background */
-    color: yellow; /* Text color */
+    color: Turquoise; /* Text color */
     border-radius: 10px; /* Optional: Rounded corners */
     max-width: 400px; /* Limit width for a clean look */
     width: 100%; /* Ensure responsiveness */
@@ -244,6 +245,9 @@ p {
 
 
 @media (max-width: 768px) {
+    .page-banner {
+        height: 200px; /* Adjust height for smaller screens */
+    }
     h1 {
         font-size: 1.5rem;
     }
@@ -260,4 +264,91 @@ p {
     .dropdown-menu ul li a {
         font-size: 1rem;
     }
+}
+
+/* Banner section */
+/* Banner section */
+.banner {
+    position: relative;
+    background-image: url('/assets/images/banner-background.png'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    height: 120px; /* Adjust height to your liking */
+}
+
+/* Name box */
+.name-box {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent background */
+    color: Turquoise;
+    padding: 15px 20px; /* Space inside the box */
+    border: 2px solid Turquoise; /* Turquoise border */
+    border-radius: 10px; /* Optional: Rounded corners */
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.name-box .subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    margin-top: 5px;
+}
+
+/* About section */
+.about-section {
+    background-color: white; /* Make the section background white */
+    color: black; /* Change text color to black */
+    padding: 40px 0; /* Add padding for spacing */
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Ensure it grows to fill the page */
+    min-height: 100vh; /* Ensure the section fills at least the full viewport height */
+}
+
+.about-container {
+    position: absolute;
+    top: 30%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 80%; /* Center content and restrict width */
+    max-width: 1200px; /* Optional: limit maximum width */
+    margin: auto;
+    gap: 30px; /* Add space between image and text */
+}
+
+/* Profile picture */
+.profile-picture img {
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid Turquoise;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    object-fit: cover;
+}
+
+/* About text */
+.about-text {
+    flex: 1; /* Allow text to take up remaining space */
+}
+
+.about-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black; /* Change text color to black */
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black; /* Change text color to black */
 }

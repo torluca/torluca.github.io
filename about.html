@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Dr. [Your Name]</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
+    <!-- Menu -->
     <header>
-        <nav>
+        <div id="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="dropdown-menu" id="dropdown">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="research.html">My Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="codes.html">My Codes</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#codes">Codes</a></li>
+                <li><a href="#outreach">Outreach</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>About Me</h1>
-            <p>I am Dr. [Your Name], an astrophysicist at the University Observatory of LMU Munich...</p>
-        </section>
-    </main>
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="name-box">
+            Luca Tortorelli <br />
+            <span class="subtitle">Astrophysicist | Science Communicator</span>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Dr. [Your Name]. All rights reserved.</p>
-    </footer>
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-container">
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <img src="assets/images/Tortorelli_picture.png" alt="Profile Picture">
+            </div>
+            <!-- About Text -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm an astrophysicist at the University Observatory of LMU Munich. I'm also a freelance collaborator of the Italian outreach page Geopop.</p>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>

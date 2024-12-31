@@ -314,7 +314,7 @@ p {
 
 .about-container {
     position: absolute;
-    top: 30%; /* Vertically center */
+    top: 35%; /* Vertically center */
     left: 50%; /* Horizontally center */
     transform: translate(-50%, -50%);
     display: flex;

@@ -352,3 +352,38 @@ p {
     line-height: 1.6;
     color: black; /* Change text color to black */
 }
+
+/* Button Container */
+.button-container {
+    position: absolute;
+    top: 60%; /* Vertically center */
+    left: 65%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 80%; /* Center content and restrict width */
+    max-width: 1200px; /* Optional: limit maximum width */
+    margin: auto;
+    gap: 30px; /* Add space between image and text */
+}
+
+/* Button Box */
+.button-box {
+    display: inline-block;
+    padding: 15px 25px; /* Adjust padding for size */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent background */
+    color: Turquoise;
+    border: 2px solid Turquoise; /* Optional: Border color */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Button Hover */
+.button-box:hover {
+    background-color: rgba(18, 18, 18, 0.8);
+    transform: scale(1.05); /* Slight scaling effect */
+}

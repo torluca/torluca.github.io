@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://torluca.github.io/sitemap.xml

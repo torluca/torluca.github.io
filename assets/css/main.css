@@ -780,3 +780,50 @@ a:hover {
     text-align: center;
   }
 }
+
+/* Publication list */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.pub-list li {
+  margin-top: 2rem;
+}
+
+/* Image under each publication */
+.pub-figure {
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.pub-figure img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+  transition: transform 0.25s ease;
+}
+
+.pub-figure img:hover {
+  transform: scale(1.015);
+}
+
+/* Optional caption */
+.pub-caption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  opacity: 0.85;
+}
+
+/* Mobile: keep it neat */
+@media (max-width: 700px) {
+  .pub-figure img {
+    max-width: 100%;
+  }
+}

@@ -136,14 +136,16 @@
               surveys to calibrate redshift distributions for cosmological analyses and obtain quantitative insights
               into galaxy evolution. I developed the <em>GalSBI-SPS</em> galaxy population model which
               allows to generate catalogues of galaxy physical, morphological, and photometric properties
-              with few lines of Python code. I am part of the some of the most important surveys that will revolutionise
-              our understanding of the cosmos and of the galaxy population in it, namely LSST, 4MOST and DESI.
+              with few lines of Python code. I am part of some of the most important surveys that will revolutionise
+              our understanding of the cosmos and of the galaxy population in it, namely Rubin-LSST, 4MOST and DESI.
               I am also interested in the scaling relations of early-type galaxies in the most massive galaxy clusters
               in the Universe at intermediate redshifts.
           </p>
           <p>
-            I am also involved in teaching astronomy courses for master's students, mentoring bachelor and master's theses,
-              and communicating science to a broader audience through articles, books, and public outreach.
+            I am involved in teaching astronomy courses for master's students, mentoring bachelor and master's theses,
+              and communicating science to a broader audience through articles, books, and public outreach. Besides
+              publishing the popular-science book "Galassie", I collaborate as freelance writer for the Italian
+              outreach platform Geopop.
           </p>
         </div>
       </section>
@@ -154,17 +156,43 @@
           <h2>Research</h2>
           <div class="grid-2">
             <div>
-              <h3>Galaxy evolution & cosmology</h3>
+              <h3>Forward-modelling & SBI</h3>
               <p>
-                Brief description of your main research themes: galaxy population models,
-                selection functions, survey design, etc. We can refine this text together.
+                My research focuses on the forward modelling of galaxy surveys and the development of simulation-based
+                inference methods for galaxy evolution and observational cosmology. I have led the design of physically
+                motivated generative models that connect galaxy physical and morphological properties to realistic
+                  photometric and spectroscopic observables. During my PhD, I introduced forward-modelling and Approximate
+                Bayesian Computation techniques to infer galaxy population properties while explicitly accounting for
+                  selection effects and observational systematics, resulting in the first measurement of galaxy luminosity functions
+                using simulation-based inference.
+                In my postdoctoral research, I extended this framework to Stage-IV survey applications, contributing to the
+                modelling of redshift distributions and survey systematics relevant for precision cosmology. I developed
+                and now maintain open-source tools such as <em>GalSBI-SPS</em> and <em>morphofit</em>, which are used to simulate
+                galaxy populations and extract structural parameters in wide-field imaging data. I am actively involved in
+                large international collaborations including LSST, 4MOST, DESI, and PAUS, where I hold coordination and
+                governance roles.
               </p>
             </div>
             <div>
-              <h3>Forward-modelling & ML</h3>
+              <h3>Galaxy evolution</h3>
               <p>
-                Short paragraph on forward-modelling pipelines, simulation-based inference,
-                and machine-learning methods you develop and apply to large surveys.
+                My research themes includes also the measurement of galaxy physical properties from photometric and
+                spectroscopic data to study the scaling relations of the galaxy population. In Tortorelli+23 I developed and publicly
+                released <em>morphofit</em>, a highly parallelisable Python package for the automated measurement of galaxy structural
+                parameters in wide-field imaging surveys. I used <em>morphofit</em> in Tortorelli+18,23 to measure the structural parameters
+                of early-type galaxies (ETGs) from the HST data of three massive galaxy clusters at intermediate redshifts,
+                with the aim of studying the Kormendy relation dependence on sample selection and wavelength probed. In
+                these studies, I have also used spectroscopic VLT/MUSE data to select samples of passive galaxies based
+                on the equivalent width of the Hdelta line.
+                I am also expert in the use of SED fitting codes to measure stellar population properties of galaxies. In Tortorelli+21
+                I used <em>CIGALE</em> to measure stellar masses, SFRs, extinctions, and metallicities of PAUS galaxies and
+                compare those against the same quantities measured on simulated data from <em>GalSBI</em> to test the realism of
+                our forward-modelling approach. In Csizi+24, my student Benjamin and I used <em>CIGALE</em> to explore the effect of
+                combining narrow-band and broad-band photometry on the precision of the physical properties estimated
+                via SED fitting, a largely unexplored research topic at the time, finding only a limited improvement in the
+                precision of the inferred properties. The ability to reliably measure galaxy properties from photometric and
+                spectroscopic data will be fundamental to constrain <em>GalSBI-SPS</em> with informative Stage IV data to improve
+                cosmological parameters estimate and obtain quantitative galaxy evolution insights.
               </p>
             </div>
           </div>
@@ -174,7 +202,7 @@
       <!-- Publications -->
       <section id="publications" class="section">
         <div class="container">
-          <h2>Selected publications</h2>
+          <h2>First author publications</h2>
           <p>
             For a complete list, see my
             <a
@@ -186,24 +214,62 @@
           </p>
           <ul class="pub-list">
             <li>
-              <strong><a href="https://arxiv.org/abs/2505.21610" target="_blank">GalSBI-SPS: a stellar population synthesis-based galaxy population model for cosmology and galaxy evolution applications</a></strong><br />
-              <span>Astronomy & Astrophysics, 2025 – GalSBI-SPS is a stellar population synthesis-based galaxy population model that generates catalogues of galaxy physical, morphological, and photometric properties for forward-modelling applications.</span>
+              <strong><a href="https://arxiv.org/abs/2505.21610" target="_blank"><em>GalSBI-SPS</em>: a stellar population synthesis-based galaxy population model for cosmology and galaxy evolution applications</a></strong><br />
+              <span>Astronomy & Astrophysics, 2025 – <em>GalSBI-SPS</em> is a stellar population synthesis-based galaxy population model that generates catalogues of galaxy physical, morphological, and photometric properties for forward-modelling applications.
+                    Galaxy catalogues are sampled hierarchically, starting with redshifts and stellar masses from a galaxy stellar mass function (blue box). Star formation histories, velocity dispersions, morphological properties and AGN contributions
+                    are sampled conditionally on redshifts and stellar masses (orange boxes), while gas metallicities, ionisations, and dust properties are also dependent on SFR (green boxes). <em>ProSpect</em> (red box) turns these physical properties into SEDs and magnitudes.</span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2505.21610" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+25_GalSBI-SPS.jpeg" alt="GalSBI-SPS figure"> </a>
             </li>
             <li>
-              <strong><a href="https://arxiv.org/abs/2509.00150" target="_blank">ProMage: fast galaxy magnitudes emulation combining SED forward-modelling and machine learning</a></strong><br />
-              <span>Proceedings of the IAU symposium "Universe AI: Exploring the Universe with Artificial Intelligence", 2025 – ProMage is a machine-learning-based emulator for the fast computation of galaxy magnitudes from their physical properties.</span>
+              <strong><a href="https://arxiv.org/abs/2509.00150" target="_blank"><em>ProMage</em>: fast galaxy magnitudes emulation combining SED forward-modelling and machine learning</a></strong><br />
+              <span>Proceedings of the IAU symposium "Universe AI: Exploring the Universe with Artificial Intelligence", 2025 – <em>ProMage</em> is a neural network that emulates the computation of observer- and rest-frame magnitudes from the generative galaxy SED package <em>ProSpec</em>.
+                    <em>ProMage</em> accelerates magnitude computation by a factor of 10,000 compared to <em>ProSpect</em>, while achieving per-mille relative accuracy for 99% of sources in the test set across the g, r, i, z, y Hyper Suprime-Cam bands.</span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2509.00150" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+25_ProMage.jpg" alt="ProMage figure"> </a>
             </li>
             <li>
               <strong><a href="https://arxiv.org/abs/2405.06009" target="_blank">Impact of stellar population synthesis choices on forward modelling-based redshift distribution estimates</a></strong><br />
-              <span>Astronomy & Astrophysics, 2024 – In this work we demonstrated how the choice of SED modelling components may substantially bias the mean and scatter of tomographic redshift distributions beyond Stage IV surveys requirements.</span>
+              <span>Astronomy & Astrophysics, 2024 – Stellar population synthesis (SPS) requires many detailed assumptions about galaxy costituents, for which model choices or parameter values are currently uncertain. In this work we performed a sensitivity analysis to quantify how different
+                    SED modelling assumptions impact tomographic N(z) in SPS-based forward-modelling. We found that uncertainities in the stellar IMF, AGN, gas physics, and dust attenuation prescriptions significantly bias the mean and scatter of tomographic N(z) beyond Stage IV requirements.</span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2405.06009" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+24_Nz.jpeg" alt="Nz figure"> </a>
             </li>
             <li>
-              <strong><a href="https://arxiv.org/abs/2302.07890" target="_blank">morphofit : An automated galaxy structural parameters fitting package</a></strong><br />
-              <span>Frontiers of Astronomy and Space Sciences, 2023 – morphofit is a highly parallelisable Python package for the robust estimate of galaxy structural parameters in modern wide-field surveys, specifically optimised for crowded environments.</span>
+              <strong><a href="https://arxiv.org/abs/2302.07896" target="_blank"> The Kormendy relation of early-type galaxies as a function of wavelength in Abell S1063, MACS J0416.1-2403, and MACS J1149.5+2223</a></strong><br />
+              <span>Astronomy & Astrophysics, 2023 – In this work we use <em>morphofit</em>  to analyse the Kormendy relations of the three Hubble Frontier Fields clusters, Abell S1063 at z = 0.348, MACS J0416.1-2403 at z = 0.396, and MACS J1149.5+2223 at z = 0.542, as a function of wavelength.
+                    This was the first time the Kormendy relation of ETGs has been explored consistently over such a large range of wavelengths at intermediate redshifts. We found that the Kormendy relation slopes increase smoothly with wavelength from the optical to the near-infrared (NIR) bands
+                    in all three clusters, with the intercepts becoming fainter at lower redshifts due to the passive ageing of the ETG stellar populations. </span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2302.07896" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+23_KR_wavelength.jpg" alt="KR wavelength figure"> </a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/2302.07890" target="_blank"> <em>morphofit</em> : An automated galaxy structural parameters fitting package</a></strong><br />
+              <span>Frontiers of Astronomy and Space Sciences, 2023 – <em>morphofit</em> is a highly parallelisable Python package for the robust estimate of galaxy structural parameters in modern wide-field surveys. The package makes use of wide-spread and reliable codes, namely, <em>SExtractor</em> and <em>GALFIT</em>.
+                    It has been optimised and tested in both low-density and crowded environments, where blending and diffuse light makes the structural parameters estimate particularly challenging. <em>morphofit</em> allows the user to fit multiple surface brightness components to each individual galaxy, among those currently
+                    implemented in the code. The package is available on github and on the Pypi server.</span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2302.07890" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+23_morphofit.jpg" alt="morphofit figure"> </a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/2106.02651" target="_blank">The PAU survey: measurement of narrow-band galaxy properties with approximate bayesian computation</a></strong><br />
+              <span>Journal of Cosmology and Astroparticle Physics, 2021 – In this work, we forward-modelled the Physics of the Accelerating Universe Survey (PAUS) narrow-band data to improve the constraints on the spectral coefficients used to create the galaxy SEDs of the galaxy population model in Tortorelli et al. 2020.
+                    We constrained our model using SBI, for the first time on multiple datasets simultaneously, and we tested the obtained posterior by comparing the stellar population properties measured consistently on data and simulations with <em>CIGALE</em> </span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2106.02651" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+21_CIGALE.jpg" alt="CIGALE stellar population figure"> </a>
             </li>
             <li>
               <strong><a href="https://arxiv.org/abs/2001.07727" target="_blank">Measurement of the B-band Galaxy Luminosity Function with Approximate Bayesian Computation</a></strong><br />
-              <span>Journal of Cosmology and Astroparticle Physics, 2021 – This work represents the first measurement in the literature of galaxy population properties combining forward-modelling and Approximate Bayesian Computation.</span>
+              <span>Journal of Cosmology and Astroparticle Physics, 2020 – This work represents the first measurement in the literature of galaxy population properties combining forward-modelling and SBI. We use Approximate Bayesian Computation (ABC) to constrain the galaxy population model parameters of the simulations and
+                   in doing so we measured the galaxy luminosity function of blue and red galaxies as function of redshift.  </span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/2001.07727" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+20_LF.jpg" alt="Tortorelli+20 luminosity function figure"> </a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/1805.05340" target="_blank">The PAU Survey: a forward modeling approach for narrow-band imaging</a></strong><br />
+              <span>Journal of Cosmology and Astroparticle Physics, 2018 – In this work we tested our phenomenological galaxy population model by forward modeling the 40 narrow-band photometry given by the PAU Survey. By comparing the principal components determined on data and simulations, we found that our model showed good agreement
+                    with the observations despite not being yet constrained against data using SBI. </span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/1805.05340" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+18_PAUS.jpg" alt="Tortorelli+18 PAUS figure"> </a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/1805.02375" target="_blank">The Kormendy relation of galaxies in the Frontier Fields clusters: Abell S1063 and MACS J1149.5+2223</a></strong><br />
+              <span>Monthly Notices of the Royal Astronomical Society, 2018 – In this work we analysed the Kormendy relation (KR) of the Frontier Fields clusters Abell S1063 and MACS J1149.5+2223. We defined and compared four different way of selecting early-type galaxy samples (a) Sersic indices: early-type (‘ETG’), (b) visual inspection: ‘ellipticals’,
+                  (c) colours: ‘red’, (d) spectral properties: ‘passive’. The comparison between the KRs obtained from the different samples suggests that the sample selection could affect the estimate of the best-fitting KR parameters. The KR built with ETGs is fully consistent with the one obtained for ellipticals and passive. On the other hand, the KR
+                  slope built on the red sample is only marginally consistent with those obtained with the other samples. </span>
+              <a class="pub-figure"  href="https://arxiv.org/abs/1805.02375" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+18_KR.png" alt="Tortorelli+18 KR figure"> </a>
             </li>
           </ul>
         </div>

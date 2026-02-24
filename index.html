@@ -21,8 +21,8 @@
     <nav class="main-nav">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
       <a href="#codes">Codes</a>
+      <a href="#publications">Publications</a>
       <a href="#outreach">Outreach</a>
       <a href="galassie.html">Book</a>
       <a href="#contact">Contact</a>
@@ -181,19 +181,55 @@
                 released <em>morphofit</em>, a highly parallelisable Python package for the automated measurement of galaxy structural
                 parameters in wide-field imaging surveys. I used <em>morphofit</em> in Tortorelli+18,23 to measure the structural parameters
                 of early-type galaxies (ETGs) from the HST data of three massive galaxy clusters at intermediate redshifts,
-                with the aim of studying the Kormendy relation dependence on sample selection and wavelength probed. In
-                these studies, I have also used spectroscopic VLT/MUSE data to select samples of passive galaxies based
-                on the equivalent width of the Hdelta line.
+                with the aim of studying the Kormendy relation dependence on sample selection and wavelength probed.
                 I am also expert in the use of SED fitting codes to measure stellar population properties of galaxies. In Tortorelli+21
                 I used <em>CIGALE</em> to measure stellar masses, SFRs, extinctions, and metallicities of PAUS galaxies and
                 compare those against the same quantities measured on simulated data from <em>GalSBI</em> to test the realism of
-                our forward-modelling approach. In Csizi+24, my student Benjamin and I used <em>CIGALE</em> to explore the effect of
-                combining narrow-band and broad-band photometry on the precision of the physical properties estimated
-                via SED fitting, a largely unexplored research topic at the time, finding only a limited improvement in the
-                precision of the inferred properties. The ability to reliably measure galaxy properties from photometric and
+                our forward-modelling approach. The ability to reliably measure galaxy properties from photometric and
                 spectroscopic data will be fundamental to constrain <em>GalSBI-SPS</em> with informative Stage IV data to improve
                 cosmological parameters estimate and obtain quantitative galaxy evolution insights.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Codes -->
+      <section id="codes" class="section section-alt">
+        <div class="container">
+          <h2>Codes & tools</h2>
+          <div class="grid-2">
+            <div>
+              <h3>The (Great) GalSBI</h3>
+              <p>
+                <a href="https://cosmo-docs.phys.ethz.ch/galsbi/index.html" target="_blank"><em>GalSBI</em></a> is a parametric galaxy population model constrained by observational data using simulation-based inference (SBI).
+                GalSBI is publicly available as Python package via <a href="https://pypi.org/project/galsbi/" target="_blank"><em>pip</em></a> and <a href="https://gitlab.com/cosmology-ethz/galsbi" target="_blank"><em>gitlab</em></a>, providing
+                  a flexible framework for generating realistic galaxy catalogs and rendering them into astronomical images via <a href="https://gitlab.com/cosmology-ethz/ufig" target="_blank"><em>UFig</em></a>.
+                  The Python package offers the possibility to draw realistic catalogues from two galaxy population models: <a href="https://www.aanda.org/articles/aa/abs/2025/11/aa55759-25/aa55759-25.html" target="_blank"><em>GalSBI-SPS</em></a>,
+                  a stellar population synthesis-based model, and its phenomenological version simply labelled as GalSBI.
+              </p>
+              <div class="code-logo">
+                  <a href="https://cosmo-docs.phys.ethz.ch/galsbi/index.html" target="_blank">
+                  <img src="assets/css/images/galsbi_sps_logo.jpg"
+                       alt="GalSBI-SPS logo"
+                       class="logo-galsbi">
+                  </a>
+              </div>
+            </div>
+            <div>
+              <h3>morphofit</h3>
+              <p>
+                <a href="https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2023.989443/full" target="_blank"><em>morphofit</em></a> is a highly parallelisable Python package for the structural decomposition of galaxy images in modern wide-field surveys.
+                  The package is publicly available via <a href="https://pypi.org/project/morphofit/" target="_blank"><em>pip</em></a> and <a href="https://github.com/torluca/morphofit" target="_blank"><em>github</em></a>. It has been successfully applied to measure the
+                  structural parameters of galaxies on HST, JWST, and KiDS images, but its modularity makes it suitable for the analysis of any photometric image.
+              </p>
+              <div class="code-logo">
+                  <a href="https://github.com/torluca/morphofit" target="_blank">
+                  <img src="assets/css/images/morphofit_logo.png"
+                       alt="morphofit logo"
+                       class="logo-morphofit">
+                  </a>
+              </div>
             </div>
           </div>
         </div>
@@ -272,29 +308,6 @@
               <a class="pub-figure"  href="https://arxiv.org/abs/1805.02375" target="_blank" rel="noopener"> <img src="assets/css/images/Tortorelli+18_KR.png" alt="Tortorelli+18 KR figure"> </a>
             </li>
           </ul>
-        </div>
-      </section>
-
-      <!-- Codes -->
-      <section id="codes" class="section section-alt">
-        <div class="container">
-          <h2>Codes & tools</h2>
-          <div class="grid-2">
-            <div>
-              <h3>GalSBI / GalSBI-SPS</h3>
-              <p>
-                Short description of your galaxy population model and links to GitHub or
-                documentation.
-              </p>
-            </div>
-            <div>
-              <h3>Other projects</h3>
-              <p>
-                Brief description of other open-source codes, notebooks, or survey tools you
-                maintain.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

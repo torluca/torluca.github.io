@@ -827,3 +827,33 @@ a:hover {
     max-width: 100%;
   }
 }
+
+/* =========================
+   Code logos (Codes section)
+   ========================= */
+
+.code-logo {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.code-logo img {
+  width: 80%;          /* quasi tutta la larghezza della colonna */
+  max-width: 100%;     /* mai oltre la colonna */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.25s ease;
+    border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  padding: 10px;
+  background: #000;
+}
+
+.code-logo img:hover {
+  transform: scale(1.05);
+}
+
+.code-logo img.logo-morphofit {
+  width: 60%;
+}

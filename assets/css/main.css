@@ -633,11 +633,6 @@ h3 {
     padding: 0.6rem 0;
   }
 
-  .btn-outline {
-    display: none; /* per avere header più pulito su mobile */
-  }
-
-
 @media (max-width: 480px) {
   .hero {
     padding-top: 4rem;

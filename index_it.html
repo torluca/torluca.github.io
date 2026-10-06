@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8" />
-    <title>Luca Tortorelli – Astrofisico & Divulgatore scientifico</title>
+    <title>Luca Tortorelli – Astrofisico &amp; Divulgatore scientifico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Personal website of Luca Tortorelli, astrophysicist and science communicator."
+      content="Sito personale di Luca Tortorelli, astrofisico e divulgatore scientifico."
     />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -21,8 +21,9 @@
     <nav class="main-nav">
       <a href="#about">Chi sono</a>
       <a href="#research">Ricerca</a>
-      <a href="#publications">Pubblicazioni</a>
       <a href="#codes">Codici</a>
+      <a href="#collaborations">Collaborazioni</a>
+      <a href="#publications">Pubblicazioni</a>
       <a href="#outreach">Divulgazione</a>
       <a href="galassie.html">Libro</a>
       <a href="#contact">Contatti</a>
@@ -40,7 +41,7 @@
       CV
     </a>
 
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Apri o chiudi la navigazione">
       ☰
     </button>
   </div>
@@ -129,10 +130,10 @@
 </div>
       </section>
 
-      <!-- About -->
+      <!-- Chi sono -->
       <section id="about" class="section">
         <div class="container">
-          <h2>About</h2>
+          <h2>Chi sono</h2>
           <p>
             Sono Luca Tortorelli, ricercatore post-doc presso l'Osservatorio astronomico di Monaco di Baviera.
               La mia ricerca scientifica verte sulla modellizzazione della popolazione di galassie nelle survey
@@ -157,21 +158,150 @@
       <!-- Research -->
       <section id="research" class="section section-alt">
         <div class="container">
-          <h2>Research</h2>
+          <h2>Ricerca</h2>
           <div class="grid-2">
             <div>
-              <h3>Galaxy evolution & cosmology</h3>
+              <h3>Forward-modelling &amp; SBI</h3>
               <p>
-                Brief description of your main research themes: galaxy population models,
-                selection functions, survey design, etc. We can refine this text together.
+                La mia ricerca si concentra sul forward-modelling delle survey di galassie e sullo sviluppo di metodi
+                di simulation-based inference per l'evoluzione delle galassie e la cosmologia osservativa. Ho guidato
+                la progettazione di modelli generativi basati su principi fisici che collegano le proprietà fisiche e
+                morfologiche delle galassie a osservabili fotometrici e spettroscopici realistici. Durante il dottorato
+                ho introdotto tecniche di forward-modelling e Approximate Bayesian Computation per inferire le proprietà
+                della popolazione di galassie tenendo esplicitamente conto degli effetti di selezione e delle sistematiche
+                osservative, ottenendo la prima misura delle funzioni di luminosità delle galassie mediante
+                simulation-based inference. Nel mio lavoro post-dottorale ho esteso questo approccio alle applicazioni
+                per le survey Stage IV, contribuendo alla modellizzazione delle distribuzioni di redshift e delle
+                sistematiche osservative rilevanti per la cosmologia di precisione. Ho sviluppato e mantengo strumenti
+                open-source come <em>GalSBI-SPS</em> e <em>morphofit</em>, utilizzati per simulare popolazioni di galassie
+                ed estrarre parametri strutturali da dati di imaging a grande campo. Partecipo attivamente a grandi
+                collaborazioni internazionali, tra cui LSST, 4MOST, DESI e PAUS, nelle quali ricopro ruoli di
+                coordinamento e governance.
               </p>
             </div>
             <div>
-              <h3>Forward-modelling & ML</h3>
+              <h3>Evoluzione delle galassie</h3>
               <p>
-                Short paragraph on forward-modelling pipelines, simulation-based inference,
-                and machine-learning methods you develop and apply to large surveys.
+                I miei temi di ricerca includono anche la misura delle proprietà fisiche delle galassie a partire da
+                dati fotometrici e spettroscopici, con l'obiettivo di studiare le relazioni di scala della popolazione
+                galattica. In Tortorelli+23 ho sviluppato e reso pubblico <em>morphofit</em>, un pacchetto Python
+                altamente parallelizzabile per la misura automatizzata dei parametri strutturali delle galassie nelle
+                survey di imaging a grande campo. Ho utilizzato <em>morphofit</em> in Tortorelli+18,23 per misurare i
+                parametri strutturali delle galassie ellittiche (ETG) nei dati HST di tre ammassi di galassie massicci a
+                redshift intermedio, studiando la dipendenza della relazione di Kormendy dalla selezione del campione e
+                dalla lunghezza d'onda osservata. Sono inoltre esperto nell'uso di codici di SED fitting per misurare le
+                proprietà delle popolazioni stellari delle galassie. In Tortorelli+21 ho utilizzato <em>CIGALE</em> per
+                misurare masse stellari, tassi di formazione stellare, estinzioni e metallicità delle galassie PAUS e
+                confrontarle con le stesse quantità misurate su dati simulati da <em>GalSBI</em>, verificando il realismo
+                del nostro approccio di forward-modelling. La capacità di misurare in modo affidabile le proprietà delle
+                galassie da dati fotometrici e spettroscopici sarà fondamentale per vincolare <em>GalSBI-SPS</em> con i
+                dati informativi delle survey Stage IV, migliorare la stima dei parametri cosmologici e ottenere
+                informazioni quantitative sull'evoluzione delle galassie.
               </p>
+            </div>
+          </div>
+          <div class="research-figures">
+            <div class="research-figure">
+              <img src="assets/css/images/GalSBI_forward_modelling_framework.jpeg"
+                   alt="Schema del forward-modelling della popolazione di galassie">
+            </div>
+            <div class="research-figure">
+              <img src="assets/css/images/galaxy_evolution_studies.jpeg"
+                   alt="Studi sull'evoluzione delle galassie">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Codes -->
+      <section id="codes" class="section section-alt">
+        <div class="container">
+          <h2>Codici &amp; strumenti</h2>
+          <div class="grid-2">
+            <div>
+              <h3>Il (grande) GalSBI</h3>
+              <p>
+                <a href="https://cosmo-docs.phys.ethz.ch/galsbi/index.html" target="_blank" rel="noopener"><em>GalSBI</em></a>
+                è un modello parametrico della popolazione di galassie vincolato dai dati osservativi mediante
+                simulation-based inference (SBI). GalSBI è disponibile pubblicamente come pacchetto Python tramite
+                <a href="https://pypi.org/project/galsbi/" target="_blank" rel="noopener"><em>pip</em></a> e
+                <a href="https://gitlab.com/cosmology-ethz/galsbi" target="_blank" rel="noopener"><em>GitLab</em></a>,
+                e fornisce un'infrastruttura flessibile per generare cataloghi realistici di galassie e renderizzarli in
+                immagini astronomiche tramite
+                <a href="https://gitlab.com/cosmology-ethz/ufig" target="_blank" rel="noopener"><em>UFig</em></a>.
+                Il pacchetto permette di estrarre cataloghi realistici da due modelli di popolazione di galassie:
+                <a href="https://www.aanda.org/articles/aa/abs/2025/11/aa55759-25/aa55759-25.html" target="_blank" rel="noopener"><em>GalSBI-SPS</em></a>,
+                basato sulla sintesi di popolazioni stellari, e la sua versione fenomenologica, denominata semplicemente GalSBI.
+              </p>
+              <div class="code-logo">
+                <a href="https://cosmo-docs.phys.ethz.ch/galsbi/index.html" target="_blank" rel="noopener">
+                  <img src="assets/css/images/galsbi_sps_logo.jpg"
+                       alt="Logo di GalSBI-SPS"
+                       class="logo-galsbi">
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3>morphofit</h3>
+              <p>
+                <a href="https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2023.989443/full" target="_blank" rel="noopener"><em>morphofit</em></a>
+                è un pacchetto Python altamente parallelizzabile per la decomposizione strutturale delle immagini di
+                galassie nelle moderne survey a grande campo. Il pacchetto è disponibile pubblicamente tramite
+                <a href="https://pypi.org/project/morphofit/" target="_blank" rel="noopener"><em>pip</em></a> e
+                <a href="https://github.com/torluca/morphofit" target="_blank" rel="noopener"><em>GitHub</em></a>.
+                È stato applicato con successo alla misura dei parametri strutturali delle galassie in immagini HST,
+                JWST e KiDS; la sua modularità lo rende tuttavia adatto all'analisi di qualsiasi immagine fotometrica.
+              </p>
+              <div class="code-logo">
+                <a href="https://github.com/torluca/morphofit" target="_blank" rel="noopener">
+                  <img src="assets/css/images/morphofit_logo.png"
+                       alt="Logo di morphofit"
+                       class="logo-morphofit">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collaborations -->
+      <section id="collaborations" class="section">
+        <div class="container">
+          <h2>Collaborazioni</h2>
+          <div class="collab-grid">
+            <div class="collab-card">
+              <h3>LSST DESC</h3>
+              <p>
+                Dal 2021 faccio parte della LSST Dark Energy Science Collaboration. Ho contribuito attivamente allo
+                sviluppo dell'infrastruttura della survey come responsabile del contributo in-kind della LMU, dedicato
+                all'implementazione di funzionalità di modellizzazione generativa nel Redshift Assessment Infrastructure
+                Layer (<a href="https://arxiv.org/pdf/2505.02928" target="_blank" rel="noopener"><em>RAIL</em></a>),
+                l'infrastruttura incaricata di produrre le distribuzioni individuali p(z) e quelle d'insieme N(z) con la
+                precisione richiesta dalla cosmologia Stage IV. Partecipo scientificamente al gruppo di lavoro sui
+                redshift fotometrici e contribuisco alla governance della collaborazione come membro del Collaboration
+                Council e del Membership Committee.
+              </p>
+              <div class="collab-logo">
+                <img src="assets/css/images/desc_logo.jpeg" alt="Logo di LSST DESC">
+              </div>
+            </div>
+            <div class="collab-card">
+              <h3>4MOST</h3>
+              <p>
+                Sono project scientist della survey 4MOST Complete Calibration of the Colour-Redshift Relation
+                (4C3R2, <a href="https://www.eso.org/sci/publications/messenger/archive/no.190-mar23/messenger-no190-28-30.pdf" target="_blank" rel="noopener"><em>Gruen+23</em></a>).
+                4C3R2 è una survey extragalattica che mira a raccogliere redshift per un campione di galassie
+                rappresentativo dello spazio dei colori esplorato dalle survey Stage IV, con l'obiettivo di migliorare
+                la calibrazione dei redshift, una delle principali sistematiche osservative nella cosmologia della
+                struttura a grande scala. 4C3R2 è una sotto-survey della survey WAVES
+                (<a href="https://www.eso.org/sci/publications/messenger/archive/no.175-mar19/messenger-no175-46-49.pdf" target="_blank" rel="noopener"><em>Driver+19</em></a>),
+                con la quale condivide il catalogo di input dei target KiDS-VIKING. In WAVES sono co-responsabile del
+                Technical Working Group 2, incaricato di misurare le proprietà fisiche delle galassie a partire dai dati
+                spettrofotometrici di 4MOST e KiDS-VIKING.
+              </p>
+              <div class="collab-logo">
+                <img src="assets/css/images/4most_waves_logo.jpeg" alt="Logo della collaborazione 4MOST">
+              </div>
             </div>
           </div>
         </div>
@@ -180,61 +310,59 @@
       <!-- Publications -->
       <section id="publications" class="section">
         <div class="container">
-          <h2>Pubblicazioni scientifiche</h2>
+          <h2>Pubblicazioni come primo autore</h2>
           <p>
-            Per una lista completa delle mie pubblicazioni scientifiche, si consulti la mia
-            <a
-              href="https://ui.adsabs.harvard.edu/public-libraries/QxeQDRpHRCiAYWTkVLvgmA"
-              target="_blank"
-              rel="noopener"
-              >ADS library</a
-            >.
+            Per una lista completa, consulta la mia
+            <a href="https://ui.adsabs.harvard.edu/public-libraries/QxeQDRpHRCiAYWTkVLvgmA"
+               target="_blank" rel="noopener">biblioteca ADS</a>.
           </p>
           <ul class="pub-list">
             <li>
-              <strong><a href="https://arxiv.org/abs/2505.21610" target="_blank">GalSBI-SPS: a stellar population synthesis-based galaxy population model for cosmology and galaxy evolution applications</a></strong><br />
-              <span>Astronomy & Astrophysics, 2025 – GalSBI-SPS è un modello di popolazioni di galassie basato su sintesi di popolazioni stellari. Permette la creazione di cataloghi di galassie, ciascuna dotata di proprietà fisiche, morfologiche e fotometriche, con l'intento di simulare l'insieme di oggetti osservato dalle survey di nuova generazione.</span>
+              <strong><a href="https://arxiv.org/abs/2505.21610" target="_blank" rel="noopener"><em>GalSBI-SPS</em>: a stellar population synthesis-based galaxy population model for cosmology and galaxy evolution applications</a></strong><br />
+              <span>Astronomy &amp; Astrophysics, 2025 – <em>GalSBI-SPS</em> è un modello della popolazione di galassie basato sulla sintesi di popolazioni stellari, capace di generare cataloghi di proprietà fisiche, morfologiche e fotometriche per applicazioni di forward-modelling. I cataloghi vengono campionati gerarchicamente, a partire da redshift e masse stellari estratti da una funzione di massa stellare delle galassie (riquadro blu). Le storie di formazione stellare, le dispersioni di velocità, le proprietà morfologiche e i contributi degli AGN sono campionati condizionatamente a redshift e massa stellare (riquadri arancioni), mentre metallicità e ionizzazione del gas e proprietà della polvere dipendono anche dal tasso di formazione stellare (riquadri verdi). <em>ProSpect</em> (riquadro rosso) trasforma queste proprietà fisiche in SED e magnitudini.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2505.21610" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+25_GalSBI-SPS.jpeg" alt="Schema di GalSBI-SPS"></a>
             </li>
             <li>
-              <strong><a href="https://arxiv.org/abs/2509.00150" target="_blank">ProMage: fast galaxy magnitudes emulation combining SED forward-modelling and machine learning</a></strong><br />
-              <span>Proceedings of the IAU symposium "Universe AI: Exploring the Universe with Artificial Intelligence", 2025 – ProMage è un algoritmo di machine learning per predire la magnitudine di una galassia in varie bande fotometriche sulla base delle sue proprietà fisiche.</span>
+              <strong><a href="https://arxiv.org/abs/2509.00150" target="_blank" rel="noopener"><em>ProMage</em>: fast galaxy magnitudes emulation combining SED forward-modelling and machine learning</a></strong><br />
+              <span>Atti del simposio IAU “Universe AI: Exploring the Universe with Artificial Intelligence”, 2025 – <em>ProMage</em> è una rete neurale che emula il calcolo delle magnitudini nel sistema di riferimento dell'osservatore e in quello a riposo a partire dal pacchetto generativo di SED galattiche <em>ProSpect</em>. <em>ProMage</em> accelera il calcolo delle magnitudini di un fattore 10.000 rispetto a <em>ProSpect</em>, raggiungendo al contempo un'accuratezza relativa dell'ordine del per mille per il 99% delle sorgenti del test set nelle bande g, r, i, z, y di Hyper Suprime-Cam.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2509.00150" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+25_ProMage.jpg" alt="Risultati di ProMage"></a>
             </li>
             <li>
-              <strong><a href="https://arxiv.org/abs/2405.06009" target="_blank">Impact of stellar population synthesis choices on forward modelling-based redshift distribution estimates</a></strong><br />
-              <span>Astronomy & Astrophysics, 2024 – In questo articolo abbiamo dimostrato come le diverse componenti utilizzate per modellizzare l'emissione luminosa di una galassia possano indurre bias nella distribuzione osservata dei redshift, un ingrediente cruciale per le indagini cosmologiche di nuova generazione.</span>
+              <strong><a href="https://arxiv.org/abs/2405.06009" target="_blank" rel="noopener">Impact of stellar population synthesis choices on forward modelling-based redshift distribution estimates</a></strong><br />
+              <span>Astronomy &amp; Astrophysics, 2024 – La sintesi di popolazioni stellari richiede numerose assunzioni dettagliate sulle componenti delle galassie, per le quali le scelte di modello o i valori dei parametri rimangono incerti. In questo lavoro abbiamo condotto un'analisi di sensibilità per quantificare l'impatto delle diverse assunzioni di modellizzazione delle SED sulle distribuzioni tomografiche N(z) ottenute mediante forward-modelling. Abbiamo mostrato che le incertezze sulla funzione iniziale di massa stellare, sugli AGN, sulla fisica del gas e sulle prescrizioni di attenuazione della polvere producono bias significativi nella media e nella dispersione delle N(z), superiori ai requisiti delle survey Stage IV.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2405.06009" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+24_Nz.jpeg" alt="Distribuzioni di redshift N(z)"></a>
             </li>
             <li>
-              <strong><a href="https://arxiv.org/abs/2302.07890" target="_blank">morphofit : An automated galaxy structural parameters fitting package</a></strong><br />
-              <span>Frontiers of Astronomy and Space Sciences, 2023 – morphofit è un pacchetto Python, altamente parallelizzabile, che permette la misura dei parametri strutturali delle galassie nelle survey a grande campo. Il codice è stato particolarmente ottimizzato per ambienti densi, come gli ammassi di galassie.</span>
+              <strong><a href="https://arxiv.org/abs/2302.07896" target="_blank" rel="noopener">The Kormendy relation of early-type galaxies as a function of wavelength in Abell S1063, MACS J0416.1-2403, and MACS J1149.5+2223</a></strong><br />
+              <span>Astronomy &amp; Astrophysics, 2023 – In questo lavoro utilizziamo <em>morphofit</em> per analizzare la relazione di Kormendy nei tre ammassi Hubble Frontier Fields Abell S1063, a z = 0,348, MACS J0416.1-2403, a z = 0,396, e MACS J1149.5+2223, a z = 0,542, in funzione della lunghezza d'onda. È stata la prima analisi coerente della relazione di Kormendy delle galassie ellittiche su un intervallo di lunghezze d'onda così ampio a redshift intermedio. Abbiamo trovato che le pendenze aumentano gradualmente dall'ottico al vicino infrarosso in tutti e tre gli ammassi, mentre le intercette diventano più deboli a redshift inferiori a causa dell'invecchiamento passivo delle popolazioni stellari.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2302.07896" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+23_KR_wavelength.jpg" alt="Relazione di Kormendy in funzione della lunghezza d'onda"></a>
             </li>
             <li>
-              <strong><a href="https://arxiv.org/abs/2001.07727" target="_blank">Measurement of the B-band Galaxy Luminosity Function with Approximate Bayesian Computation</a></strong><br />
-              <span>Journal of Cosmology and Astroparticle Physics, 2021 – Questo articolo rappresenta la prima misura in letteratura della funzione di luminosità delle galassie ottenuta attraverso la combinazione di forward-modelling e Approximate Bayesian Computation.</span>
+              <strong><a href="https://arxiv.org/abs/2302.07890" target="_blank" rel="noopener"><em>morphofit</em>: An automated galaxy structural parameters fitting package</a></strong><br />
+              <span>Frontiers in Astronomy and Space Sciences, 2023 – <em>morphofit</em> è un pacchetto Python altamente parallelizzabile per la stima robusta dei parametri strutturali delle galassie nelle moderne survey a grande campo. Utilizza codici ampiamente diffusi e affidabili, in particolare <em>SExtractor</em> e <em>GALFIT</em>. È stato ottimizzato e verificato sia in ambienti a bassa densità sia in ambienti affollati, nei quali il blending e la luce diffusa rendono particolarmente difficile la stima dei parametri strutturali. <em>morphofit</em> permette di adattare più componenti di brillanza superficiale a ciascuna galassia ed è disponibile su GitHub e PyPI.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2302.07890" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+23_morphofit.jpg" alt="Esempio di analisi con morphofit"></a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/2106.02651" target="_blank" rel="noopener">The PAU survey: measurement of narrow-band galaxy properties with approximate bayesian computation</a></strong><br />
+              <span>Journal of Cosmology and Astroparticle Physics, 2021 – In questo lavoro abbiamo riprodotto mediante forward-modelling i dati a banda stretta della Physics of the Accelerating Universe Survey (PAUS), migliorando i vincoli sui coefficienti spettrali impiegati per creare le SED delle galassie nel modello di popolazione di Tortorelli et al. 2020. Abbiamo vincolato il modello tramite SBI, per la prima volta simultaneamente su più dataset, e verificato il posteriore confrontando le proprietà delle popolazioni stellari misurate in modo coerente sui dati e sulle simulazioni con <em>CIGALE</em>.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2106.02651" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+21_CIGALE.jpg" alt="Confronto delle proprietà delle popolazioni stellari con CIGALE"></a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/2001.07727" target="_blank" rel="noopener">Measurement of the B-band Galaxy Luminosity Function with Approximate Bayesian Computation</a></strong><br />
+              <span>Journal of Cosmology and Astroparticle Physics, 2020 – Questo lavoro rappresenta la prima misura in letteratura delle proprietà della popolazione di galassie ottenuta combinando forward-modelling e SBI. Utilizziamo l'Approximate Bayesian Computation (ABC) per vincolare i parametri del modello di popolazione nelle simulazioni e misurare la funzione di luminosità delle galassie blu e rosse in funzione del redshift.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/2001.07727" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+20_LF.jpg" alt="Funzione di luminosità delle galassie di Tortorelli+20"></a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/1805.05340" target="_blank" rel="noopener">The PAU Survey: a forward modeling approach for narrow-band imaging</a></strong><br />
+              <span>Journal of Cosmology and Astroparticle Physics, 2018 – In questo lavoro abbiamo verificato il nostro modello fenomenologico della popolazione di galassie riproducendo mediante forward-modelling la fotometria nelle 40 bande strette della PAU Survey. Dal confronto delle componenti principali determinate sui dati e sulle simulazioni abbiamo riscontrato un buon accordo con le osservazioni, nonostante il modello non fosse ancora stato vincolato sui dati mediante SBI.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/1805.05340" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+18_PAUS.jpg" alt="Confronto tra dati PAUS e forward-modelling"></a>
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/1805.02375" target="_blank" rel="noopener">The Kormendy relation of galaxies in the Frontier Fields clusters: Abell S1063 and MACS J1149.5+2223</a></strong><br />
+              <span>Monthly Notices of the Royal Astronomical Society, 2018 – In questo lavoro abbiamo analizzato la relazione di Kormendy negli ammassi Frontier Fields Abell S1063 e MACS J1149.5+2223. Abbiamo definito e confrontato quattro criteri di selezione delle galassie ellittiche: indice di Sérsic, ispezione visuale, colore e proprietà spettrali. Il confronto mostra che la selezione del campione può influenzare la stima dei parametri della relazione. La relazione ottenuta per le ETG è pienamente coerente con quelle delle galassie classificate come ellittiche e passive, mentre la pendenza del campione rosso è soltanto marginalmente compatibile con quelle degli altri campioni.</span>
+              <a class="pub-figure" href="https://arxiv.org/abs/1805.02375" target="_blank" rel="noopener"><img src="assets/css/images/Tortorelli+18_KR.png" alt="Relazione di Kormendy per diverse selezioni del campione"></a>
             </li>
           </ul>
-        </div>
-      </section>
-
-      <!-- Codes -->
-      <section id="codes" class="section section-alt">
-        <div class="container">
-          <h2>Codes & tools</h2>
-          <div class="grid-2">
-            <div>
-              <h3>GalSBI / GalSBI-SPS</h3>
-              <p>
-                Short description of your galaxy population model and links to GitHub or
-                documentation. https://www.research-collection.ethz.ch/entities/publication/bdc21c93-cd9c-4812-a8aa-b61955d3ba49
-              </p>
-            </div>
-            <div>
-              <h3>Other projects</h3>
-              <p>
-                Brief description of other open-source codes, notebooks, or survey tools you
-                maintain.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -270,7 +398,7 @@
     <p>
       Da marzo 2023 collaboro con la più grande realtà divulgativa d'Italia,
         <a href="https://www.geopop.it/author/lucatortorelli/" target="_blank">Geopop</a>, come scrittore freelance.
-      Sono autore di <strong>oltre 240 articoli</strong> a tema spazio e astronomia, un'esperienza di scrittura divulgativa,
+      Sono autore di <strong>oltre 300 articoli</strong> a tema spazio e astronomia, un'esperienza di scrittura divulgativa,
         di cui sono immensamente grato, che ho cercato di trasferire nel mio libro <em>Galassie</em>.
     </p>
 
@@ -287,7 +415,7 @@
             insegnamento, collaborazioni e progetti di divulgazione.
           </p>
           <p class="contact-email">
-            <a href="mailto:&#x61;&#x73;&#x74;&#x72;&#x6F;&#x2E;&#x6C;&#x75;&#x63;&#x61;&#x2E;&#x74;&#x6F;&#x72;&#x74;&#x6F;&#x72;&#x65;&#x6C;&#x6C;&#x69;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;">
+            <a href="mailto:&#x6C;&#x75;&#x63;&#x61;&#x2E;&#x74;&#x6F;&#x72;&#x74;&#x6F;&#x72;&#x65;&#x6C;&#x6C;&#x69;&#x40;&#x70;&#x68;&#x79;&#x73;&#x69;&#x6B;&#x2E;&#x6C;&#x6D;&#x75;&#x2E;&#x64;&#x65;">
                 luca.tortorelli&nbsp;_at_&nbsp;physik.lmu.de
             </a>
           </p>
@@ -299,7 +427,7 @@
       <div class="container footer-inner">
         <span>© <span id="year"></span> Luca Tortorelli</span>
         <span class="footer-right">
-          Built with GitHub Pages.
+          Realizzato con GitHub Pages.
         </span>
       </div>
     </footer>

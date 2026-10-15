@@ -1,0 +1,10 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Local IDE configuration
+.idea/
+
+# Local working material that must not be published by GitHub Pages
+assets/css/images/Estratto da Tortorelli_IAU_discourse_series_20260315.key
+CODEX_HANDOFF_WEBSITE_*.md
